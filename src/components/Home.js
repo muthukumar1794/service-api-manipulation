@@ -11,7 +11,6 @@ constructor(props) {
     this.state = {
          userList:[],
          show:false,
-
          modalUserID : '',
          modalID:"",
          modalTitle:'',
@@ -77,19 +76,8 @@ submitForm = (e) => {
       [e.target.name]: e.target.value,
     });
   };
-  onSelected = (e)=>{
-    this.setState({
-        selected: e.target.checked,
-      });
-  }
+  
     render() {
-        if(this.state.visible){
-            setTimeout(
-                () => this.setState({ visible: false }), 
-                2000
-              );
-        }
-        
   
         const {userList,modalUserID,
             modalID,
@@ -124,14 +112,14 @@ submitForm = (e) => {
               <div className="form-group">
                 <div className="form-group">
                   <label
-                    htmlFor="Name"
+                    htmlFor="userID"
                     className="col-sm-4 control-label text-center required"
                   >
                     <b>userID</b>
                   </label>
                   <input
                     type="text"
-                    placeholder="Enter Username"
+                    placeholder="Enter userID"
                     name="modalUserID"
                     value={modalUserID}
                     required
@@ -141,10 +129,10 @@ submitForm = (e) => {
                 </div>
                 <div className="form-group">
                   <label
-                    htmlFor="Email"
+                    htmlFor="ID"
                     className="col-sm-4 control-label text-center required"
                   >
-                    <b>Email</b>
+                    <b>ID</b>
                   </label>
                   <input
                     type="ID"
@@ -159,7 +147,7 @@ submitForm = (e) => {
 
                 <div className="form-group">
                   <label
-                    htmlFor="Number"
+                    htmlFor="Title"
                     className="col-sm-4 control-label text-center required"
                   >
                     <b>Title</b>
@@ -176,7 +164,7 @@ submitForm = (e) => {
                 </div>
                 <div className="form-group">
                   <label
-                    htmlFor="City"
+                    htmlFor="Body"
                     className="col-sm-4 control-label text-center required"
                   >
                     <b>Body</b>
@@ -211,7 +199,6 @@ submitForm = (e) => {
           </Modal>
                 <div className="container">
   <h2>Data Table</h2>
-  {/* <button onClick={this.addCandidate}>Add New Candidate</button>             */}
   <table className="table table-striped"  style={{border:'1px solid'}}>
     <thead className="bg-head">
       <tr>
