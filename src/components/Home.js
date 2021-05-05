@@ -89,12 +89,11 @@ submitForm = (e) => {
             isOpen={this.state.show}
             ariaHideApp={false}
             style={{
-              overlay: {
-                backgroundColor: "grey",
-              },
+              
               content: {
                 left: "25%",
                 right: "25%",
+                bottom:'45%'
               },
             }}
           >
