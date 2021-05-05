@@ -219,7 +219,7 @@ submitForm = (e) => {
         <td className="border-right">{can.title}</td>
         <td className="border-right">{can.body}</td>
         <td style={{display:'flex'}}>
-        <a
+        <span
                                         className="text-primary"
                                         data-toggle="tooltip"
                                         data-placement="top"
@@ -236,8 +236,8 @@ submitForm = (e) => {
                                           aria-hidden="true"
                                           dataaction="Edit"
                                         ></i>
-                                      </a>
-                                      <a
+                                      </span>
+                                      <span
                                         className="text-danger"
                                         style={{ fontSize: "1.5rem" }}
                                       >
@@ -250,7 +250,7 @@ submitForm = (e) => {
                                           data-original-title="Delete"
                                           onClick={ () => this.deleteCandidate(can.id)}
                                         ></i>
-                                      </a></td>
+                                      </span></td>
 
       </tr>)}
     </tbody>
